@@ -1,0 +1,75 @@
+.styled-btn {
+    flex: 0 0 200px; 
+    flex-basis: content;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 6px;
+    font-family: "Gugi", sans-serif;
+    font-size: 1rem;
+    line-height: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--bg);
+    transition:0.3s ease all;
+}
+
+.styled-btn:hover {
+   top:auto;
+   bottom:0;
+   transform: translateY(-2px);
+}
+
+.styled-btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.styled-btn:hover:after {
+  left:0;
+  width: 100%;
+}
+
+
+.styled-btn:active {
+  top: 2px;
+}
+
+.discord {
+    background: #7289da;
+}
+
+.discord:hover {
+  box-shadow: 0 8px 20px #5865f2;
+}
+
+
+.discord:after {
+  background: #5865f2;
+}
+
+
+.email {
+    background: #acacac;
+}
+
+.email:hover {
+   box-shadow: 0 8px 20px #acacac;
+}
+
+.email:after {
+  background:#969696;
+}
+
+@media (max-width: 600px) {
+    .styled-btn {
+        flex: 1 1 100%; /* 600px 이하에선 무조건 한 줄에 하나씩 꽉 차게 */
+    }
+}   
